@@ -208,6 +208,7 @@ pom.xml.tag
 ### VisualStudioCode ###
 # .vscode/* Maybe .vscode/**/* instead - see comments (exclude .vscode in any folder)
 .vscode/**/*
+.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
