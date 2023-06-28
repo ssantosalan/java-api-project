@@ -1,6 +1,7 @@
 package com.api.pokeproject.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,7 +16,7 @@ public class Pessoa implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private UUID id;
 
     @Column(nullable = false, length = 70)
     private String name;
@@ -27,11 +28,11 @@ public class Pessoa implements Serializable{
     private String CPF;
 
 
-    public Integer getId() {
+    public UUID getId() {
         return this.id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

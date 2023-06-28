@@ -1,7 +1,9 @@
-package com.api.pokeproject.service.impl;
+package com.api.pokeproject.service.implementacao;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
@@ -27,8 +29,18 @@ public class PessoaServiceImplementacao implements PessoaService {
     }
 
     @Override
-    public Optional<Pessoa> findById(Integer id) {
+    public Optional<Pessoa> findById(UUID id) {
         return pessoaRepository.findById(id);          
+    }
+
+    @Override
+    public Pessoa createPessoa(Pessoa pessoa) {
+        return pessoaRepository.save(pessoa);
+    }
+
+    @Override
+    public List<Pessoa> findAll() {
+        return pessoaRepository.findAll();
     }
 
 }

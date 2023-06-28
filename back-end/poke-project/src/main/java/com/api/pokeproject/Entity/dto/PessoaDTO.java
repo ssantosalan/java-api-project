@@ -1,5 +1,7 @@
 package com.api.pokeproject.entity.dto;
 
+import java.util.UUID;
+
 import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +14,7 @@ import jakarta.validation.constraints.Size;
 @Component
 public class PessoaDTO {
 
-    private Integer id;
+    private UUID id;
     @NotBlank
     private String name;
     @Email
@@ -34,11 +36,11 @@ public class PessoaDTO {
         this.CPF = pessoa.getCPF();
     }
 
-    public Integer getId() {
+    public UUID getId() {
         return this.id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
