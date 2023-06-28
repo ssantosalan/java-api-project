@@ -1,31 +1,38 @@
-package com.api.pokeproject.entity;
+package com.api.pokeproject.entity.dto;
 
-import java.io.Serializable;
+import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.stereotype.Component;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.api.pokeproject.entity.Pessoa;
 
-@Entity
-@Table(name = "TB_PESSOA")
-public class Pessoa implements Serializable{
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+@Component
+public class PessoaDTO {
+
     private Integer id;
-
-    @Column(nullable = false, length = 70)
+    @NotBlank
     private String name;
-    @Column(nullable = false, unique = true, length = 70)
+    @Email
     private String email;
-    @Column(nullable = false, unique = true, length = 50)
+    @NotBlank
+    @Size(min = 4)
     private String password;
-    @Column(nullable = false, unique = true, length = 50)
+    @CPF
     private String CPF;
 
+    public PessoaDTO() {
+    }
+
+    public PessoaDTO(Pessoa pessoa) {
+        this.id = pessoa.getId();
+        this.name = pessoa.getName();
+        this.email = pessoa.getEmail();
+        this.password = pessoa.getPassword();
+        this.CPF = pessoa.getCPF();
+    }
 
     public Integer getId() {
         return this.id;
@@ -66,6 +73,5 @@ public class Pessoa implements Serializable{
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-
 
 }
