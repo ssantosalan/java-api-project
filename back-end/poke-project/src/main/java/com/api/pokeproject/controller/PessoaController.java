@@ -45,7 +45,7 @@ public class PessoaController {
             Pessoa novaPessoa = pessoaService.createPessoa(pessoa);
             return ResponseEntity.status(HttpStatus.CREATED).body(novaPessoa);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(" - Erro ao criar a Pessoa");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(" - Erro ao criar a Pessoa");
         }
     }
 
