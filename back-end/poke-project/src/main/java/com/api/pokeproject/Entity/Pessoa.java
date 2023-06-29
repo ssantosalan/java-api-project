@@ -68,5 +68,11 @@ public class Pessoa implements Serializable{
         this.CPF = CPF;
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", CPF=" + CPF
+                + "]";
+    }
+
 
 }

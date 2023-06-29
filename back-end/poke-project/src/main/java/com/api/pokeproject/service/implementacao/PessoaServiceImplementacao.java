@@ -30,7 +30,7 @@ public class PessoaServiceImplementacao implements PessoaService {
 
     @Override
     public Optional<Pessoa> findById(UUID id) {
-        return pessoaRepository.findById(id);          
+        return pessoaRepository.findById(id);
     }
 
     @Override
