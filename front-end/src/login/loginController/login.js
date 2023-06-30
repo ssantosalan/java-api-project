@@ -2,12 +2,12 @@ function fazerRequisicao() {
     console.log("-----------------> Teste")
     const url = 'http://localhost:8080/pessoa/create'; // Substitua pela URL da sua API
     const data = {
-        nome: document.getElementById("name"),
-        email: document.getElementById("emai"),
-        password: document.getElementById("password"),
-        cpf: document.getElementById("cpf")
+        name:"Alan",
+        email: "alan@gmail.com",
+        password: "123654",
+        cpf: "32198765422"
     };
-    console.log(data)
+    console.log(JSON.stringify(data))
     fetch(url, {
         method: 'POST',
         headers: {
@@ -24,4 +24,8 @@ function fazerRequisicao() {
         console.error('Erro na requisição:', error);
         // Trate o erro da requisição
     });
+}
+
+function Teste() {
+    console.log("teste")
 }

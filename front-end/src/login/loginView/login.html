@@ -10,9 +10,10 @@
 </head>
 
 <body>
+    <form onsubmit="Teste()">
         <div>
             <div>
-                <label for="nome">Nome</label>
+                <label for="name">Nome</label>
                 <input type="text" name="name" id="name" placeholder="Nome">
             </div>
             <div>
@@ -28,6 +29,8 @@
                 <input type="text" name="cpf" id="cpf" placeholder="cpf">
             </div>
         </div>
-        <button onclick = "fazerRequisicao()" >Enviar Requisição POST</button>
+       <button type="submit">Enviar</button>
+    </form>
 </body>
+
 </html>
