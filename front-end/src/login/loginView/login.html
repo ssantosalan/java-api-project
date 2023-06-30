@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="../loginController/login.js"></script>
+    <title>Login - Poke Project</title>
+</head>
+
+<body>
+        <div>
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Nome">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite o email">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Digite o password">
+            </div>
+            <div>
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" placeholder="cpf">
+            </div>
+        </div>
+        <button onclick = "fazerRequisicao()" >Enviar Requisição POST</button>
+</body>
+</html>
