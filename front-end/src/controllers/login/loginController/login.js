@@ -2,10 +2,10 @@ function fazerRequisicao() {
     console.log("-----------------> Teste")
     const url = 'http://localhost:8080/pessoa/create'; // Substitua pela URL da sua API
     const data = {
-        name:"Alan",
-        email: "alan@gmail.com",
-        password: "123654",
-        cpf: "32198765422"
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        cpf: document.getElementById("cpf").value
     };
     console.log(JSON.stringify(data))
     fetch(url, {
@@ -28,8 +28,8 @@ function fazerRequisicao() {
 
 function teste(){
     const name = document.querySelector("#name");
-    const email = document.getElementById("email");
+    const email = "teste";
     const password = document.getElementById("password");
     const cpf = document.getElementById("cpf");
-    alert('name: ' + name.innerHTML + "\nEmail: " + email.textContent)
+    alert('name: ' + name.value + "\nEmail: " + password.value)
 }
