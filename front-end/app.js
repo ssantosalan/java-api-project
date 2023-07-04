@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, './src/controllers')));
 // Definir uma rota para a página inicial
 app.get('/', (req, res) => {
   console.log("---------------------------> " + __dirname)
-  const filePath = path.join(__dirname, './src/login/loginView/login.html');
+  const filePath = path.join(__dirname, './src/login/login.html');
   res.sendFile(filePath);
 });
 
