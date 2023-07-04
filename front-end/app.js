@@ -3,6 +3,9 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
+// Servir arquivos estáticos
+app.use(express.static(path.join(__dirname, './src/controllers')));
+
 // Definir uma rota para a página inicial
 app.get('/', (req, res) => {
   console.log("---------------------------> " + __dirname)

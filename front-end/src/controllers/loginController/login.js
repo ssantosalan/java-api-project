@@ -26,6 +26,10 @@ function fazerRequisicao() {
     });
 }
 
-function Teste() {
-    console.log("teste")
+function teste(){
+    const name = document.querySelector("#name");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const cpf = document.getElementById("cpf");
+    alert('name: ' + name.innerHTML + "\nEmail: " + email.textContent)
 }
