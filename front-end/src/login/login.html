@@ -4,30 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login/loginView/login.css">
+    <link rel="shortcut icon" src="https://img.icons8.com/bubbles/100/snorlax.png" type="image/x-icon">
+    <link rel="stylesheet" href="/login/loginView/login.css">
     <title>Login - Poke Project</title>
 </head>
 
 <body>
-    <div>
-        <div>
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" placeholder="Nome">
+    <header>
+        <h1>Poke Project</h1>
+    </header>
+    <main>
+        <div class="block-login">
+            <h2>Login</h2>
+            <div class="email">
+                <input type="email" name="email" id="email" required="true" placeholder="Insira seu email">
+            </div>
+            <div class="password">
+                <input type="password" name="password" id="password" required="true" placeholder="Insira sua senha">
+            </div>
+            <button type="submit" onclick="login()">Log-in</button>
         </div>
         <div>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite o email">
+            <a href="/cadastro">Fale com o professor Carvalho e pegue sua pokedex</a>
         </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Digite o password">
-        </div>
-        <div>
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" placeholder="cpf">
-        </div>
-    </div>
-       <button onclick="fazerRequisicao()">Enviar</button>
+    </main>
+    <footer></footer>
 </body>
 <script type="text/javascript" src="login/loginController/login.js"></script>
 </html>

@@ -49,6 +49,12 @@ public class PessoaController {
         }
     }
 
+    @PostMapping("/home")
+    public ResponseEntity<Object> loginPost (@RequestBody Pessoa pessoa){
+        System.out.println("Pessoa: " + pessoa);
+        return ResponseEntity.status(HttpStatus.OK).body("Foi em!");
+    }
+
     @GetMapping()
     public ResponseEntity<List<Pessoa>> getAllPessoa() {
         List<Pessoa> pessoas = pessoaService.findAll();

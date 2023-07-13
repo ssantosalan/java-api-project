@@ -1,11 +1,11 @@
-function fazerRequisicao() {
+function login() {
     console.log("-----------------> Teste")
     const url = 'http://localhost:8080/pessoa/create'; // Substitua pela URL da sua API
     const data = {
-        name: document.getElementById("name").value,
+        name: "Alan",
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
-        cpf: document.getElementById("cpf").value
+        cpf: "48945612300"
     };
     console.log(JSON.stringify(data))
     fetch(url, {
@@ -15,21 +15,12 @@ function fazerRequisicao() {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-        console.log('Resposta da API:', result);
-        // Faça algo com a resposta da API
+    .then(response => {
+        console.log('Resposta da API:', response);
+        window.location.href = '/home'; // Redireciona para a rota '/home'
     })
     .catch(error => {
         console.error('Erro na requisição:', error);
         // Trate o erro da requisição
     });
-}
-
-function teste(){
-    const name = document.querySelector("#name");
-    const email = "teste";
-    const password = document.getElementById("password");
-    const cpf = document.getElementById("cpf");
-    alert('name: ' + name.value + "\nEmail: " + password.value)
 }
