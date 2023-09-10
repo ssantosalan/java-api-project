@@ -1,3 +1,11 @@
-body{
-    background-color: rgb(222, 0, 137);
+body {
+    background-color: rgb(231, 209, 222);
+    align-items: center;
+}
+
+.block-login {
+    margin: auto;
+    width: 10%;
+    border: 3px solid rgb(152, 248, 123);
+    padding: 10px;
 }

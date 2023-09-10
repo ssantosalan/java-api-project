@@ -11,13 +11,20 @@
     <div class="block-login">
         <h2>Cadastro</h2>
         <img width="100" height="100" src="https://img.icons8.com/bubbles/100/snorlax.png" alt="snorlax"/>
+        <div class="nome">
+            <input type="text" name="name" id="name" required="true" placeholder="Insira seu nome">
+        </div>
         <div class="email">
             <input type="email" name="email" id="email" required="true" placeholder="Insira seu email">
         </div>
         <div class="password">
             <input type="password" name="password" id="password" required="true" placeholder="Insira sua senha">
         </div>
-        <button type="submit" onclick="cadastrarUsuario()">Pegar pokedex</button>
+        <div class="cpf">
+            <input type="text" name="cpf" id="cpf" required="true" placeholder="Insira CPF">
+        </div>
+        <button type="submit" onclick="cadastrar()">Pegar pokedex</button>
     </div>
 </body>
+<script type="text/javascript" src="/static/cadastro/cadastroController/cadastro.js"></script>
 </html>

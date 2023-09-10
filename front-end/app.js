@@ -26,7 +26,7 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/cadastro', (req, res) => {
-  const filePath = path.join(__dirname, '/src/cadastroView/cadastro.html');
+  const filePath = path.join(__dirname, './src/cadastroView/cadastro.html');
   res.sendFile(filePath);
 });
 
